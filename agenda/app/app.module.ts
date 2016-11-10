@@ -5,9 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
 
 import { AppComponent }   from './app.component';
-import { EjemplosBindingComponent} from "./ejemplos/ejemplos-binding.component";
-import { EjemplosComponentesComponent, CajaComponent} from "./ejemplos/ejemplos-componentes.component";
+import { EjemplosBindingComponent } from "./ejemplos/ejemplos-binding.component";
+import { EjemplosComponentesComponent, CajaComponent } from "./ejemplos/ejemplos-componentes.component";
 import { ListaContactosComponent } from "./lista-contactos/lista-contactos.component";
+import { ContactosService } from "./servicios/contactos.service";
 
 // Decoramos la clase 'AppModule' con el decorador 'NgModule' para que ésta se
 // comporte como un módulo. Es necesario indicar ciertos metadatos.
@@ -29,14 +30,16 @@ import { ListaContactosComponent } from "./lista-contactos/lista-contactos.compo
     CajaComponent,
     EjemplosBindingComponent,
     EjemplosComponentesComponent,
-    ListaContactosComponent,
+    ListaContactosComponent
   ],
 
   // En 'providers' establecemos los proveedores de todas las piezas de código que
   // sean susceptibles de ser inyectadas como dependencias en otras. Principalmente,
   // y en la gran mayoría de los casos, indicaremos servicios, que es la pieza
   // inyectable más común de la plataforma.
-  providers: [],
+  providers: [
+    ContactosService
+  ],
 
   // Aquí indicamos el componente raíz. El módulo necesita saber cuál de todos los
   // componentes declarados es el que está más arriba en la jerarquía para saber
