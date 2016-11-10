@@ -1,31 +1,19 @@
+// En el documento 'app.component.ts' definimos el componente raíz de nuestra app.
 import { Component } from '@angular/core';
 
+// Decoramos la clase 'AppComponent' con el decorador 'Component' para que ésta se
+// comporte como un componente. Es necesario indicar ciertos metadatos.
 @Component({
-  selector: 'my-app',
+
+  // Con 'selector' establecemos el nombre de la etiqueta HTML
+  // que usaremos para instanciar este componente.
+  selector: 'mensaje',
+
+  // Con 'templateUrl' indicamos la ruta al HTML que contiene la vista del
+  // componente. Si es muy liviana, podemos indicarla en línea usando 'template'.
   templateUrl: './app/app.component.html',
-  styles: [`
-    .caja{
-      width: 200px;
-      height: 200px;
-      background-color: red;
-    }
-    `]  	
+
 })
 export class AppComponent {
 
-  alumnos: string = "Keepcoders";
-
-  numeroDeLaSuerte: number = 42;
-
-  textareaLineas: number = 10;
-
-  pintamosClase: boolean = true;
-
-  obtenerColor() {return "blue"; }
-
-  mostrarMensaje(){ alert("Hola señoritas y señoritos!")}
-
-  escribirMensaje(mensaje){
-    console.log(mensaje)
-  }
- }
+}

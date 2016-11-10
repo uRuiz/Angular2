@@ -1,5 +1,4 @@
 # Carpeta node_modules
 agenda/node_modules
-
-agenda/app/*.js
-agenda/app/*.map
+agenda/out
+*.log
