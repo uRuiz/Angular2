@@ -4,4 +4,18 @@
 <!-- Ejemplos de comunicación entre componentes. Descomentar para ver. -->
 <!--<ejemplos-componentes></ejemplos-componentes>-->
 
-<lista-contactos [contactos]="listaContactos"></lista-contactos>
+<div class="container">
+    
+    <!-- Título -->
+    <header>
+        <h1>Mi Agenda</h1>
+    </header>
+    <!-- Colección de contactos -->
+    <lista-contactos
+        [contactos]="listaContactos"
+        (seleccionado)="mostrarDetalles($event)"></lista-contactos>
+
+    <!-- Detalles del contacto seleccionado -->
+    <detalles-contacto [contacto]="contactoSeleccionado"></detalles-contacto>
+
+</div>
