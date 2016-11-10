@@ -1,4 +1,5 @@
 # Carpeta node_modules
 agenda/node_modules
 agenda/out
+agenda/.vscode
 *.log
