@@ -1,0 +1,14 @@
+<h1>Hello {{ alumnos }}!</h1>
+<h2>Y el número es: {{ numeroDeLaSuerte }}</h2>    
+<textarea [rows]="textareaLineas"></textarea>
+<div [class.caja]="pintamosClase"></div>
+<p [style.color]="obtenerColor()">¡Buenas noches!</p>
+<button (click)="mostrarMensaje()">Mostrar Mensaje</button>    
+<p>
+  <input type="text" [(ngModel)]="mensaje" />
+  {{ mensaje}}
+</p>
+<caja color="blue" (encima)="escribirMensaje($event)"></caja>
+<caja (encima)="escribirMensaje($event)"></caja>
+<caja color="green" (encima)="escribirMensaje($event)"></caja>
+<caja color="yellow" (encima)="escribirMensaje($event)"></caja>
