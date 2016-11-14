@@ -3,12 +3,22 @@
     {
       "nombre": "Urko",
       "apellidos": "Ruiz",
-      "email": "",
+      "email": "zaszur@hotmail.com",
       "telefono": "",
       "twitter": "",
       "facebook": "",
       "avatar": "",
       "id": 1
+    },
+    {
+      "nombre": "Espinete",
+      "apellidos": "Pinchos",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "avatar": "",
+      "id": 2
     }
   ]
 }
