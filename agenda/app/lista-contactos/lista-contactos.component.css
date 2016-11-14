@@ -1,13 +1,13 @@
 ul {
-    list-style-type: none;
+    list-style: none;
 }
 
-li{
+li {
     margin: 0;
-    padding: 5px 14px;
+    padding: 6px 14px;
 }
 
 li:hover {
     cursor: pointer;
-    background-color: #f0f0f0;
+    background: #f0f0f0;
 }

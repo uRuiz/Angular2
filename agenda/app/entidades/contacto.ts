@@ -11,9 +11,10 @@ export class Contacto {
         public telefono: string,
         public twitter: string,
         public facebook: string,
-        public avatar: string,
+        public avatar: string
     ) { }
 
+    // Crea una instancia de la clase Contacto a partir del objeto JSON indicado.
     static nuevoDesdeJson(json: any): Contacto {
         return new Contacto(
             json.id,
@@ -23,15 +24,17 @@ export class Contacto {
             json.telefono,
             json.twitter,
             json.facebook,
-            json.avatar
+            json.avatar || ""
         );
     }
 
-    generarRutaFacebook(): string{
-       return this.facebook ? `https://www.facebook.com/${this.facebook}` : null;
+    // Generamos la ruta correspondiente al perfil Facebook del usuario.
+    generarRutaFacebook(): string {
+        return this.facebook ? `https://www.facebook.com/${this.facebook}` : null;
     }
 
-    generarRutaTwitter(): string{
+    // Generamos la ruta correspondiente al perfil Twitter del usuario.
+    generarRutaTwitter(): string {
         return this.twitter ? `https://twitter.com/${this.twitter}` : null;
     }
 }
