@@ -19,6 +19,26 @@
       "facebook": "",
       "avatar": "",
       "id": 2
+    },
+    {
+      "nombre": "Gema",
+      "apellidos": "Temprano",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "avatar": "",
+      "id": 3
+    },
+    {
+      "nombre": "Patricio",
+      "apellidos": "Estrella",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "avatar": "",
+      "id": 4
     }
   ]
 }
