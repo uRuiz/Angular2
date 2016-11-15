@@ -4,7 +4,7 @@ import { Observable } from "rxjs/Observable";
 import "rxjs/add/operator/map";
 
 import { Contacto } from '../entidades/contacto';
-import { DireccionServidor } from '../configuracion/rutas';
+import { DireccionServidor, DireccionFaker } from '../configuracion/rutas';
 
 // Con el decorador 'Injectable' marcamos una clase para que
 // se comporte como servicio.
@@ -14,8 +14,10 @@ export class ContactosService {
     // Inyectamos Http como dependencia.
     constructor(
         private _http: Http,
-        @Inject(DireccionServidor) private _direccionServidor) { }
-        
+        @Inject(DireccionServidor) private _direccionServidor,
+        @Inject(DireccionFaker) private _direccionFaker) { }
+
+         
 
     // Obtenemos la lista de contactos almacenados.
     obtenerContactos(): Observable<Contacto[]> {
@@ -77,7 +79,7 @@ export class ContactosService {
     // Obtenemos un avatar aleatorio.
     generarRutaAvatar(): Observable<string> {
         return this._http
-                   .get("http://faker.hook.io/?property=image.avatar")
+                   .get(`${this._direccionFaker}`)
                    .map((respuesta: Response) => {
                        // Obtenemos el cuerpo de la respuesta en formato texto.
                        let rutaAvatar = respuesta.text();
